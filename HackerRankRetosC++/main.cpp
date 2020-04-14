@@ -1,50 +1,61 @@
-#include <bits/stdc++.h>
-
+#include <iostream>
+#include <cstdio>
 using namespace std;
-
-
 
 int main()
 {
+    // Complete the code.
     int n;
+    int l;
     cin >> n;
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
-
-    // Write Your Code Here
-    if(n <= 9 && n >= 1){
-
-       if(1==n){
-        cout << "one" << endl;
-
-       }if(2==n){
-           cout << "two" << endl;
-
-       }if(3==n){
-           cout << "three" << endl;
-
-       }if(4==n){
-           cout << "four" << endl;
-       }if(5==n){
-           cout << "five" << endl;
-
-       }if(6==n){
-           cout << "six" << endl;
-
-       }if(7==n){
-           cout << "seven" << endl;
-
-       }if(8==n){
-           cout << "eight" << endl;
-       }if(9==n){
-           cout << "nine" << endl;
-       }
+    cin >> l;
+    for(int i= n; i <= l; i++)
+    {
+        if(i >= 1 && i <= 9)
+        {
+            if(i == 1)
+            {
+                cout << "one" << endl;
+            }
+            if(i == 2)
+            {
+                cout << "two" << endl;
+            }
+            if(i == 3)
+            {
+                cout << "three" << endl;
+            }
+            if(i == 4)
+            {
+                cout << "four" << endl;
+            }
+            if(i == 5)
+            {
+                cout << "five" << endl;
+            }
+            if(i == 6)
+            {
+                cout << "six" << endl;
+            }
+            if(i == 7)
+            {
+                cout << "seven" << endl;
+            }
+            if(i == 8)
+            {
+                cout << "eight" << endl;
+            }
+            if(i == 9)
+            {
+                cout << "nine" << endl;
+            }
+        }
+        else if(i%2 ==
+                 0){
+           cout << "even" <<endl;
+        }
+        else{
+            cout << "odd" << endl;
+        }
     }
-
-    else{
-
-       cout << "the number that you put is more than 9 or less than 1" << endl;
-
-    }
-
-    return 0;
 }
