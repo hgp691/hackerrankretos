@@ -2,79 +2,49 @@
 
 using namespace std;
 
-vector<string> split_string(string);
 
-/*
- * Complete the simpleArraySum function below.
- */
-int simpleArraySum(vector<int> ar) {
-    /*
-     * Write your code here.
-     */
-     int tamano = ar.size();
-     int sumatoria = 0;
-     for(int x = 0; x < tamano ; x++){
-      sumatoria += ar[x];
-     }
-     return sumatoria;
-}
 
 int main()
 {
-    ofstream fout(getenv("OUTPUT_PATH"));
-
-    int ar_count;
-    cin >> ar_count;
+    int n;
+    cin >> n;
     cin.ignore(numeric_limits<streamsize>::max(), '\n');
 
-    string ar_temp_temp;
-    getline(cin, ar_temp_temp);
+    // Write Your Code Here
+    if(n <= 9 && n >= 1){
 
-    vector<string> ar_temp = split_string(ar_temp_temp);
+       if(1==n){
+        cout << "one" << endl;
 
-    vector<int> ar(ar_count);
+       }if(2==n){
+           cout << "two" << endl;
 
-    for (int ar_itr = 0; ar_itr < ar_count; ar_itr++) {
-        int ar_item = stoi(ar_temp[ar_itr]);
+       }if(3==n){
+           cout << "three" << endl;
 
-        ar[ar_itr] = ar_item;
+       }if(4==n){
+           cout << "four" << endl;
+       }if(5==n){
+           cout << "five" << endl;
+
+       }if(6==n){
+           cout << "six" << endl;
+
+       }if(7==n){
+           cout << "seven" << endl;
+
+       }if(8==n){
+           cout << "eight" << endl;
+       }if(9==n){
+           cout << "nine" << endl;
+       }
     }
 
-    int result = simpleArraySum(ar);
+    else{
 
-    fout << result << "\n";
-    cout << "result: " << result << "\n";
+       cout << "the number that you put is more than 9 or less than 1" << endl;
 
-    fout.close();
+    }
 
     return 0;
-}
-
-vector<string> split_string(string input_string) {
-    string::iterator new_end = unique(input_string.begin(), input_string.end(), [] (const char &x, const char &y) {
-        return x == y and x == ' ';
-    });
-
-    input_string.erase(new_end, input_string.end());
-
-    while (input_string[input_string.length() - 1] == ' ') {
-        input_string.pop_back();
-    }
-
-    vector<string> splits;
-    char delimiter = ' ';
-
-    size_t i = 0;
-    size_t pos = input_string.find(delimiter);
-
-    while (pos != string::npos) {
-        splits.push_back(input_string.substr(i, pos - i));
-
-        i = pos + 1;
-        pos = input_string.find(delimiter, i);
-    }
-
-    splits.push_back(input_string.substr(i, min(pos, input_string.length()) - i + 1));
-
-    return splits;
 }
